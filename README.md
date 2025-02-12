@@ -1,2 +1,3 @@
 # DesarrolloWebRDCM
-Materia de Desarrollo Web Semestre 1/25
+Estudiante: Ramiro David Cuiza Muraña
+Carrera: Ingeniería de Sistemas
