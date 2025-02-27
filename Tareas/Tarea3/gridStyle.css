@@ -7,7 +7,7 @@ body{
    grid-template-areas: 'cabezera cabezera'
                         'sis cc'
                         'menu menu'  ;
-   grid-template-rows: auto 50px 60px;                     
+   grid-template-rows: 140px 50px 60px;                     
    width: 900px;
    margin: 0 auto;
    background-color: lightgreen;
@@ -17,11 +17,30 @@ body{
    border: 1px solid black;
    background-color: antiquewhite;
    text-align: center;
-   line-height: 70px;
 }
 .c1{
    grid-area: cabezera;
    background-color: #FABF8F;
+   justify-content: space-around;
+   align-items: center;
+   display: grid;
+   grid-template-columns: auto auto auto;
+}
+
+div.c1 h1{
+   font-size: 130%;
+   text-align: center;
+   color:#C60000 ;
+   margin-bottom: -60px;
+}
+div.c1 h2{
+   font-size: 120%;
+   text-align: center;
+   color: #0070C0;
+}
+div.c1 img{
+   width: 100px;
+   height: 100px;
 }
 
 .c2{
@@ -33,8 +52,11 @@ body{
    background-color: #92D050;
 }
 .c4{   
+   display: grid;
+   grid-template-columns: 420px 480px;
    grid-area: menu;
    background-color: black;
+   color: yellow;
 }
 .grid-layout2{
    display: grid;
@@ -42,7 +64,7 @@ body{
    grid-template-areas: 'lateral contenido'
                         'pie pie';
    grid-template-rows: 300px 50px ; 
-   grid-template-columns: 120px auto;                    
+   grid-template-columns: 120px 780px;                    
    width: 900px;
    margin: 0 auto;
    background-color: lightgreen;
@@ -59,4 +81,32 @@ body{
    grid-area: pie;
    background-color: white;
 }
+
+.spanCar{
+   padding-top: 1px;
+   width: 420px;
+}
+button{
+   border: 2px solid #C60000;
+   background-color:#FFFF66 ;
+   width: 150px;
+   height: 40px;
+   margin-top: 5px;
+}
+.btlado{
+   width: 100px;
+   height: 40px;
+   margin-top: 10px;
+   margin-left: 10px;
+   border: 2px solid #C60000;
+   background-color:#FFFF66 ;
+}
+.priIma{
+   margin-left:60px;
+   margin-top: 60px;
+   width: 35%; height: 60%;
+ }
+ .segIma{
+     margin-left:60px;
+ }
 
