@@ -4,19 +4,15 @@ require("verificarsesion.php");
 require("verificarnivel.php");
 
 
-$nombres=$_POST['nombres'];
-$apellidos=$_POST['apellidos'];
-$fecha_nacimiento=$_POST['fecha_nacimiento'];
-$sexo=$_POST['sexo'];
-$correo=$_POST['correo'];
+$nombre=$_POST['nombre'];
 
 //$sql="INSERT INTO personas(nombres,apellidos,fecha_nacimiento,sexo,correo) VALUES('$nombres','$apellidos','$fecha_nacimiento','$sexo','$correo')";
 
 
-$stmt=$con->prepare('INSERT INTO personas(nombres,apellidos,fecha_nacimiento,sexo,correo) VALUES(?,?,?,?,?)');
+$stmt=$con->prepare('INSERT INTO profesiones(nombre) VALUES(?)');
 
 // Vincular parámetros
-$stmt->bind_param("sssss",$nombres, $apellidos,$fecha_nacimiento,$sexo,$correo);
+$stmt->bind_param("s",$nombre);
 
 
 
@@ -29,4 +25,4 @@ if ($stmt->execute()) {
 
 $con->close();
 ?>
-<meta http-equiv="refresh" content="3;url=read.php">
+<meta http-equiv="refresh" content="3;url=readprofesiones.php">

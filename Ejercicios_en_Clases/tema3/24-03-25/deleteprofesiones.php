@@ -6,7 +6,7 @@ require("verificarnivel.php");
 $id=$_GET['id'];
 //$sql="DELETE FROM personas WHERE id=$id";
 
-$stmt=$con->prepare('DELETE FROM personas WHERE id=?');
+$stmt=$con->prepare('DELETE FROM profesiones WHERE id=?');
 $stmt->bind_param("i",$id);
 // Ejecutar la consulta
 if ($stmt->execute()) {
@@ -17,4 +17,4 @@ if ($stmt->execute()) {
 
 $con->close();
 ?>
-<meta http-equiv="refresh" content="3;url=read.php">
+<meta http-equiv="refresh" content="3;url=readprofesiones.php">
