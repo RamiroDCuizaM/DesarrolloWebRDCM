@@ -14,7 +14,7 @@ $profesion_id=$_POST['profesion_id'];
 //$sql="UPDATE personas SET nombres='$nombres',apellidos='$apellidos',fecha_nacimiento='$fecha_nacimiento',sexo='$sexo',correo='$correo' WHERE id=$id";
 $fotografia = "";
 
-if (isset($_FILES['fotografia']['name']))
+if ($_FILES['fotografia']["name"]!="")
 {
     
     $datosfotografia=explode('.', $_FILES['fotografia']['name']);

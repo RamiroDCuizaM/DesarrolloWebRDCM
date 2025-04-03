@@ -7,7 +7,7 @@ require("verificarsesion.php");
 
 <?php
 include("conexion.php");
-$sql="SELECT personas.id,nombres,apellidos,fecha_nacimiento,sexo,correo,profesiones.nombre as profesion FROM personas
+$sql="SELECT fotografia,personas.id,nombres,apellidos,fecha_nacimiento,sexo,correo,profesiones.nombre as profesion FROM personas
       LEFT JOIN profesiones ON personas.profesion_id=profesiones.id";  
 
 $resultado=$con->query($sql);
@@ -16,6 +16,7 @@ $resultado=$con->query($sql);
 <table style="border-collapse: collapse" border="1" >
     <thead>
         <tr>
+            <th width="100px">Fotografia</th>
             <th width="100px">Nombres</th>
             <th width="100px">Apellidos</th>
             <th width="60px">Fec.Nacimiento</th>
@@ -32,6 +33,7 @@ $resultado=$con->query($sql);
  while($row=mysqli_fetch_array($resultado)){
     ?>
     <tr>
+        <td><img src="images/<?php echo $row['fotografia'];  ?>" width="100px"></td>
         <td><?php echo $row['nombres'];?></td>
         <td><?php echo $row['apellidos'];?></td>
         <td><?php echo $row['fecha_nacimiento'];?></td>

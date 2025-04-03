@@ -12,7 +12,8 @@ $correo=$_POST['correo'];
 $profesion_id=$_POST['profesion_id'];
 
 $fotografia = "";
-if (isset($_FILES['fotografia']))
+
+if ($_FILES['fotografia']["name"]!="")
 {
     $datosfotografia=explode('.', $_FILES['fotografia']['name']);
     $fotografia=uniqid().'.'.$datosfotografia[1];
