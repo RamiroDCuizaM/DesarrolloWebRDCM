@@ -1,0 +1,105 @@
+.coLogin{
+    margin: 0 auto;
+    background-color:white;
+    width: 350px;
+    height: 400px;
+}
+.conIni{
+    display: flex;
+    margin: 0 auto;
+    width: 1300px;
+    height: 700px;
+}
+.lateral{
+    display: flex;
+    width: 20%;
+    height: 100%;
+    background-color: aqua;
+    flex-direction: column;
+}
+.contenido{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 100%;
+    border: 1px solid black;
+}
+.menuL{
+    display: flex;
+    flex-direction: column;
+    background-color: #4E5256;
+    height: 400px;
+
+}
+.info{
+    border-bottom: 2px solid red;
+    background-color: #4E5256;
+    height: 300px;
+}
+.buttonL{
+    display: flex; 
+    margin-top: 15px;
+    margin-left: 10px;
+    width: 100px;
+    height: 30px;
+    background-color: #4E5256;
+    border: 1px solid #4E5256;
+}
+.imagenL{
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+.menuS{
+    display: flex;
+    flex-direction: row-reverse;
+    height: 50px;
+    background-color: #F6F5F5;
+    border-bottom: 2px solid black;
+}
+.menuM{ 
+    display: flex;
+    flex-direction: column;
+    height: 650px;
+}
+.buttonS{
+    display: flex; 
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 30px;
+    height: 30px;
+}
+.infoM{
+    height: 100px;
+    background-color: #F6F5F5;
+}
+.targetasM{
+    height: 550px;
+    background-color: #F6F5F5;
+}
+.tM{
+   display: flex;
+   background: #F6F5F5;
+   margin: 0 auto;
+   margin-top: 150px;
+   width: 600px;
+   height: 250px;
+}
+.conT{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 130px;
+    height: 230px;
+    border: 1px solid black;
+}
+.buttonT{
+    width: 130px; 
+    height: 50px;
+    background-color: white;
+}
+.imagenT{
+    width: 130px;
+    height: 180px ;
+}

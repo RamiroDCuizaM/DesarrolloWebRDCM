@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario Cliente</title>
+</head>
+<body>
+    <h2>Formulario del Cliente</h2>
+    <form action="mostrar.php" method="POST">
+        <label>Nombres: <input type="text" name="nombres"></label><br><br>
+        <label>Apellidos: <input type="text" name="apellidos"></label><br><br>
+        <label for="sexo">Sexo:</label>
+        <input type="radio" name="sexo" value="Masculino">Masculino
+        <input type="radio" name="sexo" value="Femenino">Femenino<br><br>
+        <label>Dirección: <input type="text" name="direccion"></label><br><br>
+        <label>Celular: <input type="text" name="celular"></label><br><br>
+        <label>Correo: <input type="email" name="correo"></label><br><br>
+        <button type="submit">Mostrar</button>
+    </form>
+</body>
+</html>

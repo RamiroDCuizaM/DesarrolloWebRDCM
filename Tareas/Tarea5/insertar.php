@@ -6,6 +6,7 @@ if (!isset($_SESSION['p'])) {
     $_SESSION['p'] = new Pila();    
 }
 
+
 if (!empty($_GET['elemento'])) {
     $_SESSION['p']->insertar($_GET['elemento']);
 }

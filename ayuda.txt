@@ -1,0 +1,73 @@
+SELECT a.*, c.nombre AS nombre_carrera
+FROM alumnos a
+INNER JOIN carreras c ON a.codigocarrera = c.idcarrera;
+
+¿Qué hace?
+
+Devuelve solo los alumnos que tienen una carrera asignada (es decir, donde codigocarrera coincide con idcarrera).
+
+Si algún alumno no tiene carrera (valor codigocarrera nulo o sin coincidencia), no aparecerá en el resultado.
+
+
+SELECT a.*, c.nombre AS nombre_carrera
+FROM alumnos a
+JOIN carreras c ON a.codigocarrera = c.idcarrera;
+
+¿Qué hace?
+
+Es exactamente igual a INNER JOIN.
+
+Muestra alumnos con una carrera válida registrada en la tabla carreras.
+
+SELECT a.*, c.nombre AS nombre_carrera
+FROM alumnos a
+LEFT JOIN carreras c ON a.codigocarrera = c.idcarrera;
+
+¿Qué hace?
+
+Muestra todos los alumnos, tengan o no una carrera asignada.
+
+Si no hay coincidencia en la tabla carreras, el campo nombre_carrera será NULL.
+
+🔍 Ideal para ver alumnos que aún no tienen carrera registrada.
+
+SELECT a.*, c.nombre AS nombre_carrera
+FROM alumnos a
+RIGHT JOIN carreras c ON a.codigocarrera = c.idcarrera;
+
+SELECT a.*, c.nombre AS nombre_carrera
+FROM alumnos a
+RIGHT JOIN carreras c ON a.codigocarrera = c.idcarrera;
+
+¿Qué hace?
+
+Muestra todas las carreras, incluso si no tienen alumnos asociados.
+
+Si no hay alumnos en esa carrera, los campos de la tabla alumnos saldrán como NULL.
+
+🔍 Útil para detectar carreras que aún no tienen alumnos inscritos.
+
+
+EL FOREACH (Ejemplos)
+$frutas = ["manzana", "naranja", "plátano"];
+
+foreach ($frutas as $fruta) {
+    echo $fruta . "<br>";
+}
+
+$frutas = ["manzana", "naranja", "plátano"];
+
+foreach ($frutas as $fruta) {
+    echo $fruta . "<br>";
+}
+
+<?php
+// Supongamos que tienes una cookie llamada "usuario"
+if (isset($_COOKIE["usuario"])) {
+    // Eliminar la cookie
+    setcookie("usuario", "", time() - 3600, "/");
+    echo "La cookie 'usuario' ha sido eliminada.";
+} else {
+    echo "No hay cookie 'usuario' que eliminar.";
+}
+?>
