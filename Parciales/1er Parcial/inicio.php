@@ -13,7 +13,7 @@
                 <img src="PrimerParcial/Avatar.png" alt="" style="width: 70px; height: 70px; margin-top: 40px; margin-left:100px">
                 <h4 style="text-align: center; color: white;"><b>Ramiro Cuiza Muraña</b></h4>
                 <h5 style="text-align: center; color: white;">35-5325</h5>
-                <h4 style="text-align: center; color: white;"><b>Repostorio github.com</b></h4>
+                <h4 style="text-align: center; color: white;"><a href="https://github.com/RamiroDCuizaM/DesarrolloWebRDCM.git"><b>Repositorio github.com</b></a></h4>
             </div>
             <div class="menuL">
                 <button class="buttonL"><img src="PrimerParcial/inicio.png" class="imagenL"> <a href="inicio.php" style="color:white;">Inicio</a></button>
