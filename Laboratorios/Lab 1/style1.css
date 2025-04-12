@@ -1,0 +1,55 @@
+.conteinar{
+    margin: 0 auto;
+    width: 1000px;
+}
+
+.cabezera{
+    display: flex;
+    justify-content:space-between;
+    background-color: #E4E6E5;
+    width: 900px;
+    height: 150px;
+}
+.menu{
+    background-color: #323232;
+    width: 900px;
+    height: 70px;
+}
+.contenido{
+    background-color: aqua;
+    width: 900px;
+    height: 700px;
+}
+
+nav.container {
+    background-color: #010101;
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bolder;
+      padding-left: 40px;
+  }
+  nav.container ul {
+  
+    display: flex;
+   
+    align-items: center;
+  
+    list-style: none;
+  }
+  nav.container ul li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: "Montserrat Variable", ui-sans-serif, sy;
+  }
+  
+  nav.container ul li a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    
+  }
+  nav.container ul li a:visited {
+    background-color: orange;
+  
+  }

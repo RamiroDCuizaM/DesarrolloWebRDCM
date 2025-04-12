@@ -1,0 +1,53 @@
+.contenido{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 350px;
+    border-radius: 10px;
+    border: 2px solid red;
+    margin: 0 auto;
+}
+.titulo{
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    background-color: #F9F59D;
+    border-bottom: 2px solid #BBBA93;
+    border-radius: 10px 10px 0 0;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    background-color: #F9F59D;
+    height: 300px;
+    border-radius: 0 0 10px 10px;
+}
+.titulo h3{
+    margin-left: 20px;
+    color: green;
+}
+.titulo h6{
+    margin-right: 20px;
+    color: red;
+}
+.info{
+    margin:10px;
+}
+
+.bttonR{
+    background-color: #599D24;
+    color:white;
+    text-align: center;
+    width: 80px;
+    height: 30px;
+    margin-left: 175px;
+}
+
+.bttonR:hover {
+    background-color: blue;
+    color: red;
+}
+.lbelM{
+    margin-right: 100px;
+    margin-top: -550px;
+}
