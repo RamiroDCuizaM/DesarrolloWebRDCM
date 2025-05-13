@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Contar números pares</title>
+</head>
+<body>
+  <h2>Conteo de Números Pares</h2>
+  <p id="resultado"></p>
+
+  <script>
+    const arreglo = [];
+    let contadorPares = 0;
+
+    for (let i = 0; i < 5; i++) {
+      let valor = prompt(`Introduce el valor ${i + 1}:`);
+      let numero = parseInt(valor);
+
+      // Verificar si es un número válido
+      if (isNaN(numero)) {
+        alert("Por favor, introduce solo números.");
+        i--; // Repetir este índice
+      } else {
+        arreglo.push(numero);
+        if (numero % 2 === 0) {
+          contadorPares++;
+        }
+      }
+    }
+
+    const resultado = document.getElementById("resultado");
+    resultado.innerHTML = `
+      Arreglo ingresado: [${arreglo.join(', ')}] <br>
+      Cantidad de números pares: ${contadorPares}
+    `;
+  </script>
+</body>
+</html>

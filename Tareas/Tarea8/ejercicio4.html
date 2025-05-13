@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Serie Fibonacci</title>
+</head>
+<body>
+  <h2>Serie Fibonacci</h2>
+  <ul id="fibonacci-list"></ul>
+
+  <script>
+    // Solicitar al usuario un número
+    const N = parseInt(prompt("¿Cuántos números de la serie Fibonacci deseas generar?"));
+
+    // Función para generar la serie Fibonacci
+    function generarFibonacci(n) {
+      const fib = [];
+      for (let i = 0; i < n; i++) {
+        if (i === 0) {
+          fib.push(0);
+        } else if (i === 1) {
+          fib.push(1);
+        } else {
+          fib.push(fib[i - 1] + fib[i - 2]);
+        }
+      }
+      return fib;
+    }
+
+    // Llamar a la función y guardar el resultado
+    const serie = generarFibonacci(N);
+
+    // Obtener el elemento <ul> del DOM
+    const lista = document.getElementById("fibonacci-list");
+
+    // Agregar cada número como un <li>
+    serie.forEach(num => {
+      const item = document.createElement("li");
+      item.textContent = num;
+      lista.appendChild(item);
+    });
+  </script>
+</body>
+</html>

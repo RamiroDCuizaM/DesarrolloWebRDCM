@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora</title>
+  <style>
+    #resultado {
+      margin-top: 10px;
+      padding: 10px;
+      background-color: yellow;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h2>Operación</h2>
+  <select id="operacion">
+    <option value="suma">Suma</option>
+    <option value="resta">Resta</option>
+    <option value="multiplicacion">Multiplicación</option>
+    <option value="division">División</option>
+  </select><br><br>
+
+  <label>A</label><br>
+  <input type="number" id="valorA"><br><br>
+  <label>B</label><br>
+  <input type="number" id="valorB"><br><br>
+
+  <button onclick="calcular()">Calcular</button>
+
+  <div id="resultado">Resultado aquí</div>
+
+  <script>
+    function calcular() {
+      const a = parseFloat(document.getElementById("valorA").value);
+      const b = parseFloat(document.getElementById("valorB").value);
+      const operacion = document.getElementById("operacion").value;
+      const resultado = document.getElementById("resultado");
+      let res;
+
+      switch (operacion) {
+        case "suma":
+          res = a + b;
+          break;
+        case "resta":
+          res = a - b;
+          break;
+        case "multiplicacion":
+          res = a * b;
+          break;
+        case "division":
+          res = b !== 0 ? a / b : "No se puede dividir por cero";
+          break;
+      }
+
+      resultado.textContent = "Resultado: " + res;
+    }
+  </script>
+</body>
+</html>

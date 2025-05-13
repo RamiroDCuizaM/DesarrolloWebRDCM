@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Verificar Palíndromo</title>
+</head>
+<body>
+  <h2>Resultado:</h2>
+  <p id="resultado"></p>
+
+  <script>
+    function esPalindromo(cadena) {
+      const limpia = cadena.toLowerCase().replace(/[\W_]/g, '');
+      const reversa = limpia.split('').reverse().join('');
+      return limpia === reversa;
+    }
+
+    const entrada = prompt("Introduce una cadena de texto:");
+    const resultado = document.getElementById("resultado");
+
+    if (entrada !== null) {
+      if (esPalindromo(entrada)) {
+        resultado.textContent = "✅ Es un palíndromo";
+      } else {
+        resultado.textContent = "❌ No es un palíndromo";
+      }
+    } else {
+      resultado.textContent = "No se ingresó ninguna cadena.";
+    }
+  </script>
+</body>
+</html>

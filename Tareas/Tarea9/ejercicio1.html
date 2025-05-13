@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contenedor{
+            width: 400px;
+            height: 450px;
+            margin: 0 auto;
+            border: 2px solid black;
+            border-radius: 15px;
+        }
+        #resultado {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            color: black;
+            font-weight: bold;
+            border: 1px solid black;
+            text-align: center;
+        }
+        input{
+            width: 350px;
+            height: 20px;
+            margin-left: 20px;
+        }
+        label{
+            margin-left: 20px;
+        }
+        .bCompa{
+           width: 350px;
+           height: 35px;
+           background-color: blue;
+           color: white;
+           margin-left: 20px;
+        }
+    </style>
+    <script>
+        function comparar(){
+            var a = parseInt(document.querySelector('#a').value);
+            var b = parseInt(document.querySelector('#b').value);
+            var contenido = document.getElementById('resultado');
+            if(a>b){
+                contenido.textContent = 'A es mayor B';
+                contenido.style.background = 'green';
+            }
+            if(b>a){
+                contenido.textContent = 'B es mayor A';
+                contenido.style.background = 'cadetblue';
+            }
+            if(a==b){
+                contenido.textContent = 'A es igual a B';
+                contenido.style.background = 'gray';
+            }
+            contenido.style.display='block';
+        }
+    </script>
+</head>
+<body>
+    <div class="contenedor">
+        <br><br>
+        <label for="a">Número A</label><br><br>
+        <input type="number" id="a"><br><br>
+        <label for="b">Número B</label><br><br>
+        <input type="number" id="b"><br><br>
+        <button class="bCompa" onclick="comparar()">Comparar</button>
+
+        <div id="resultado"></div>
+    </div>
+    
+</body>
+</html>

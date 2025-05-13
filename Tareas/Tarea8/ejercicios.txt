@@ -1,0 +1,16 @@
+Tarea 8. Ejercicios JavaScript
+1. Definir una función que determine si la cadena de texto que se le pasa como parámetro es un palíndromo,
+es decir, si se lee de la misma forma desde la izquierda y desde la derecha.
+luego introducir mediante prompt una variable e imprimir el mensaje segun corresponda :es un palidromo o no es un palidromo
+
+Ejemplo de palíndromo complejo: "La ruta nos aporto otro paso
+natural".
+2.  Introducir un arreglo de 5 posiciones mediante prompt, luego contar cuántos números pares hay en el arreglo  e imprimir ese 
+datos en el documento
+
+
+3. Escribir el código para solicitar los datos de un libro (titulo,autor, editorial ,anio) mediante promp con esos datos crear el 
+objeto libro  y el metodo mostrar que muestra los datos del libro en pantalla
+
+4.  Solicitar mediante un promp y Generar los primeros N números de la serie Fibonacci que debe ser guardados en un arreglo, luego 
+imprimir en un lista no enumerada
