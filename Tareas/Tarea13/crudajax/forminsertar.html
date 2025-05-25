@@ -1,0 +1,53 @@
+<!-- Modal Insertar -->
+<div class="modal fade" id="modalInsertar" tabindex="-1" aria-labelledby="modalInsertarLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <form action="javascript:crear()" method="post" id="form-insertar">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalInsertarLabel">Insertar Persona</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="mb-3 col-12 col-xl-6">
+              <label for="nombres" class="form-label">Nombres</label>
+              <input type="text" class="form-control" id="nombres" name="nombres" aria-describedby="nombreHelp" />
+              <div id="nombreHelp" class="form-text">Introduzca su nombre completo.</div>
+            </div>
+            <div class="mb-3 col-12 col-xl-6">
+              <label for="apellidos" class="form-label">Apellidos</label>
+              <input type="text" class="form-control" name="apellidos" />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="mb-3 col-12 col-xl-6">
+              <label for="fecha_nacimiento" class="form-label">Fecha de Nacimiento</label>
+              <input type="date" name="fecha_nacimiento" class="form-control" />
+            </div>
+            <div class="mb-3 col-12 col-xl-6">
+              <label class="form-label d-block">Sexo</label>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="sexo" id="sexoM" value="Masculino" />
+                <label class="form-check-label" for="sexoM">Masculino</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="sexo" id="sexoF" value="Femenino" />
+                <label class="form-check-label" for="sexoF">Femenino</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="correo" class="form-label">Correo</label>
+            <input type="email" name="correo" class="form-control" />
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Guardar</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
