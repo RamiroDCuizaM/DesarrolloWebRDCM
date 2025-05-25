@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Galería Biblioteca</title>
+  <style>
+    #men {
+      width: 60px;
+      float: left;
+    }
+
+    #princip {
+      float: left;
+      width: calc(100% - 60px);
+      min-height: 300px;
+      border: 1px solid purple;
+    }
+
+    #mensaj {
+      clear: both;
+      background-color: #0a5d7b;
+      color: white;
+      padding: 10px;
+    }
+
+    button.menu-btn {
+      width: 50px;
+      height: 50px;
+      margin: 5px;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-content {
+      background-color: #fff;
+      margin: 5% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 600px;
+      height: 200px;
+      text-align: center;
+      position: relative;
+    }
+
+    .modal-content img {
+      width: 600px;
+      height: 200px;
+      object-fit: contain;
+    }
+
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div id="men">
+  <button class="menu-btn" onclick="loadGaleria()">2</button>
+  <button class="menu-btn">1</button>
+  <button class="menu-btn">3</button>
+  <button class="menu-btn">4</button>
+  <button class="menu-btn">5</button>
+  <button style="background-color: red; color: white;">Menu</button>
+</div>
+
+<div id="princip"></div>
+<div id="mensaj">Área de mensajes</div>
+
+<!-- Modal -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close" id="closeModalBtn">&times;</span>
+    <img id="modalImage" src="" alt="Imagen del libro" />
+    <br><br>
+    <button onclick="closeModal()">Aceptar</button>
+  </div>
+</div>
+
+<script>
+function loadGaleria() {
+  fetch('galeria.php')
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById('princip').innerHTML = html;
+
+      // Importante: agregar evento a las imágenes después de que se agregan al DOM
+      document.querySelectorAll('.img-galeria').forEach(img => {
+        img.addEventListener('click', function () {
+          const src = this.getAttribute('src');
+          document.getElementById('modalImage').setAttribute('src', src);
+          document.getElementById('myModal').style.display = 'block';
+        });
+      });
+    })
+    .catch(err => {
+      document.getElementById('mensaj').textContent = "Error al cargar galería: " + err;
+    });
+}
+
+function closeModal() {
+  document.getElementById('myModal').style.display = 'none';
+}
+
+document.getElementById('closeModalBtn').addEventListener('click', closeModal);
+
+// Cerrar el modal si se hace clic fuera del contenido
+window.addEventListener('click', function (e) {
+  const modal = document.getElementById('myModal');
+  if (e.target === modal) {
+    closeModal();
+  }
+});
+</script>
+
+</body>
+</html>

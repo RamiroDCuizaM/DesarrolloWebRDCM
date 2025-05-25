@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.contenedor {
+    display: flex;
+    border: 2px solid purple;
+    width: 800px;
+    height: 350px;
+    margin: 0 auto;
+}
+
+.menu-lateral {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 2px solid purple;
+    position: relative;
+}
+
+#men {
+    display: none;
+    display: grid; 
+    grid-template-columns: repeat(2, 40px);
+    gap: 5px; 
+    margin-top: 10px;
+}
+
+#men button {
+    width: 40px;
+    height: 40px;
+    background-color: #004466;
+    color: white;
+    border: none;
+    font-weight: bold;
+}
+
+
+#men button:nth-child(5) {
+    grid-column: span 2;
+}
+
+.menu-btn {
+    width: 100%;
+    background-color: red;
+    color: white;
+    padding: 10px 0;
+    border: none;
+    position: absolute;
+    bottom: 0;
+}
+
+.contenido {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#princip {
+    flex-grow: 1;
+    padding: 10px;
+    border-bottom: 2px solid purple;
+}
+
+#mensaj {
+    background-color: #004466;
+    color: white;
+    padding: 10px;
+}

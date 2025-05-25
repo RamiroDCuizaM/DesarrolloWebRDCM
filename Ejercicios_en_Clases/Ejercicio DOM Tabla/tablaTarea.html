@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .formulario{
+            display: flex;
+            justify-content: space-between;
+        }
+        .izquierda{
+            display: flex;
+            flex-direction: column;
+        }
+        .derecha{
+            display: flex;
+            flex-direction: column;
+        }
+        .entrada{
+            width: 60px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="formulario">
+        <label for="tabla">Tabla</label>
+        <input type="text" class="entrada" id="tabla">
+        <div class="izquierda">
+            <label><input type="radio" name="operacion" value="suma"> suma</label>
+            <label><input type="radio" name="operacion" value="resta"> resta</label>
+        </div>
+        <div class="derecha">
+            <label><input type="radio" name=operacion value="multiplica"> multiplicación</label>
+            <label><input type="radio" name=operacion value="dividir"> división</label>
+        </div>
+        <label for="hasta">Hasta</label>
+        <input type="text" class="entrada" id="hasta">
+        <button id="calcular">Calcular</button>
+        
+        
+    </div>
+    <div id="resultado"></div>
+
+    <script>
+        document.getElementById('calcular').addEventListener("click",()=>{
+            html='';
+
+        })
+    </script>
+</body>
+</html>

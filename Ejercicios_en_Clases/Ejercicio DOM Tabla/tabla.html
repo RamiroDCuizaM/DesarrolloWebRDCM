@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Operaciones</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .formulario {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+            border: 2px solid black;
+            border-radius: 20px ;
+            padding: 30px;
+        }
+
+        #resultado {
+            margin-top: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 300px;
+            text-align: center;
+        }
+
+        table, th, td {
+            border: 1px solid #ccc;
+            padding: 5px;
+        }
+
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="formulario">
+        <label for="numero">Tabla</label>
+        <input type="number" id="numero" value="5">
+
+        <label><input type="checkbox" id="suma"> suma</label>
+        <label><input type="checkbox" id="resta"> resta</label>
+        <label><input type="checkbox" id="multiplica"> multiplica</label>
+        <label><input type="checkbox" id="divide"> dividir</label>
+
+        <label for="hasta">Hasta</label>
+        <input type="number" id="hasta" value="4">
+
+        <button id="calcular">Calcular</button>
+    </div>
+
+    <div id="resultado"></div>
+
+    <script>
+        document.getElementById('calcular').addEventListener('click', function() {
+            const numero = parseInt(document.getElementById('numero').value);
+            const hasta = parseInt(document.getElementById('hasta').value);
+            const resultado = document.getElementById('resultado');
+
+            const operaciones = [];
+
+            if (document.getElementById('suma').checked) operaciones.push('+');
+            if (document.getElementById('resta').checked) operaciones.push('-');
+            if (document.getElementById('multiplica').checked) operaciones.push('*');
+            if (document.getElementById('divide').checked) operaciones.push('/');
+
+            if (operaciones.length === 0) {
+                resultado.innerHTML = '<p style="color:red;">Seleccione al menos una operación.</p>';
+                return;
+            }
+
+            let html = '';
+
+            operaciones.forEach(op => {
+                html += `<table>
+                    <tr><th colspan="4">${op === '+' ? 'Suma' : op === '-' ? 'Resta' : op === '*' ? 'Multiplicación' : 'División'}</th></tr>
+                    <tr><th>X</th><th>${op}</th><th>${numero}</th><th>=</th></tr>`;
+
+                for (let i = 1; i <= hasta; i++) {
+                    let resultadoOperacion;
+
+                    switch(op) {
+                        case '+': resultadoOperacion = i + numero; break;
+                        case '-': resultadoOperacion = i - numero; break;
+                        case '*': resultadoOperacion = i * numero; break;
+                        case '/': resultadoOperacion = (i / numero).toFixed(2); break;
+                    }
+
+                    html += `<tr>
+                                <td>${i}</td>
+                                <td>${op}</td>
+                                <td>${numero}</td>
+                                <td>${resultadoOperacion}</td>
+                             </tr>`;
+                }
+
+                html += `</table><br>`;
+            });
+
+            resultado.innerHTML = html;
+        });
+    </script>
+</body>
+</html>
