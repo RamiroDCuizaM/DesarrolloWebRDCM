@@ -1,0 +1,49 @@
+.contenedor{
+    width: 800px;
+    height: 500px;
+    margin: 0 auto;
+}
+.superior{
+    display: flex;
+}
+.botones{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 150px;
+    height: 430px;
+    border: 2px solid #69A342;
+}
+.contenido{
+    width: 650px;
+    height: 430px;
+    border: 2px solid #69A342;
+    border-left: none;
+}
+.mensaje{
+    width: 100%;
+    height: 70px;
+    background-color: #4471C4;
+    color: white;
+    text-align: center;
+}
+.menu{
+    margin-top: 20px;
+    width: 50px;
+    height: 50px;
+}
+.menu:hover{
+    background-color: blue;
+    color:white;
+}
+.fila{
+    display: flex;
+    margin-top: 10px;
+    margin-left: 50px;
+}
+.raya{
+    margin-right: 10px;
+    margin-left: 10px;
+    width: 70px;
+    height: 70px;
+}

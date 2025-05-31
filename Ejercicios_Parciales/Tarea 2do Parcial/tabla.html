@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Operaciones</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .formulario {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+            border: 2px solid black;
+            border-radius: 20px ;
+            padding: 30px;
+        }
+
+        #resultado {
+            margin-top: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 300px;
+            text-align: center;
+        }
+
+        table, th, td {
+            border: 1px solid #ccc;
+            padding: 5px;
+        }
+
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="formulario">
+        <label for="numero">Tabla</label>
+        <input type="number" id="numero" value="5">
+
+        <label><input type="checkbox" id="suma"> suma</label>
+        <label><input type="checkbox" id="resta"> resta</label>
+        <label><input type="checkbox" id="multiplica"> multiplica</label>
+        <label><input type="checkbox" id="divide"> dividir</label>
+
+        <label for="hasta">Hasta</label>
+        <input type="number" id="hasta" value="4">
+
+        <button id="calcular" onclick="calcular()">Calcular</button>
+    </div>
+
+    <div id="resultado"></div>
+
+    <script src="ajax.js"></script>
+</body>
+</html>
