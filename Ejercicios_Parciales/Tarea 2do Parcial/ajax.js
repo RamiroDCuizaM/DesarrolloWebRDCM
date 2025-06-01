@@ -84,3 +84,45 @@ function formEditar(id){
             cargarContenidoF('listar.php');
         });
 }
+
+// Carga la lista de libros al hacer clic en Pregunta 4
+function cargarListaLibros(ascendente = 'asc') {
+    fetch(`listarLibro.php?orden=titulo&ascendente=${ascendente}`)
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("contenido").innerHTML = data;
+        })
+        .catch(error => console.error("Error cargando lista de libros:", error));
+}
+
+// Se llama desde el enlace del título para reordenar
+function ordenarPorTitulo(asc) {
+    cargarListaLibros(asc);
+}
+
+function cargarDatosLibros() {
+    fetch('datos.php')
+        .then(response => response.json())
+        .then(libros => {
+            let contenido = '<select id="selectLibros" onchange="mostrarImagenLibro(this.value)">';
+            libros.forEach((libro, index) => {
+                contenido += `<option value="${libro.imagen}">${libro.titulo}</option>`;
+            });
+            contenido += '</select>';
+            contenido += '<div id="imagenLibro" style="margin-top:10px;"></div>';
+
+            document.getElementById("contenido").innerHTML = contenido;
+
+            // Mostrar la primera imagen por defecto
+            if (libros.length > 0) {
+                mostrarImagenLibro(libros[0].imagen);
+            }
+        })
+        .catch(error => console.error('Error cargando datos de libros:', error));
+}
+
+function mostrarImagenLibro(imagen) {
+    const ruta = 'images/' + imagen;
+    document.getElementById("imagenLibro").innerHTML = `<img src="${ruta}" width="150">`;
+}
+
