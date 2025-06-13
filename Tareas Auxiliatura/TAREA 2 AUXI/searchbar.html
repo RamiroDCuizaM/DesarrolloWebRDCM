@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buscador de Libros</title>
+  <style>
+
+
+    /* Estilos para el modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  display: none;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #555;
+}
+
+  </style>
+</head>
+<body>
+  <div class="search-container">
+    <input onchange="javascript:search()" type="text" id="searchbar" placeholder="Buscar libros por título o autor...">
+    <div id="results" class="results-grid"></div>
+  </div>
+
+  <!-- Modal para detalles del libro -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="titulo-modal"></h2>
+      <div id="contenido-modal"></div>
+    </div>
+  </div>
+
+  
+</body>
+<script src="script.js"></script>
+</html>
