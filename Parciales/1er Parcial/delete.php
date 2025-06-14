@@ -1,7 +1,9 @@
-<?php session_start();
+<?php 
 include("conexion.php");
 
 $id=$_GET['id'];
+//$sql="DELETE FROM personas WHERE id=$id";
+
 $stmt=$con->prepare('DELETE FROM libros WHERE id=?');
 $stmt->bind_param("i",$id);
 // Ejecutar la consulta
@@ -13,4 +15,4 @@ if ($stmt->execute()) {
 
 $con->close();
 ?>
-<meta http-equiv="refresh" content="3;url=pregunta5.php">
+<meta http-equiv="refresh" content="3;url=pregunta4.php">

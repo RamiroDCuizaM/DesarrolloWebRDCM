@@ -19,14 +19,14 @@
                 <button class="buttonL"><img src="PrimerParcial/inicio.png" class="imagenL"> <a href="inicio.php" style="color:white;">Inicio</a></button>
                 <button class="buttonL"><img src="PrimerParcial/clientes.png" class="imagenL"> <a href="pregunta2.html" style="color:white;">Clientes</a></button>
                 <button class="buttonL"><img src="PrimerParcial/items.png" class="imagenL"> <a href="formGrafica.html" style="color:white;">Items</a></button>
-                <button class="buttonL"><img src="PrimerParcial/Prestamos.png" class="imagenL"> <a href="" style="color:white;">Prestamos</a></button>
-                <button class="buttonL"><img src="PrimerParcial/Usuarios.png" class="imagenL"> <a href="" style="color:white;">Usuarios</a></button>
+                <button class="buttonL"><img src="PrimerParcial/Prestamos.png" class="imagenL"> <a href="pregunta4.php" style="color:white;">Prestamos</a></button>
+                <button class="buttonL"><img src="PrimerParcial/Usuarios.png" class="imagenL"> <a href="login.html" style="color:white;">Usuarios</a></button>
             </div>
         </div>
         <div class="contenido">
             <div class="menuS"> 
                 <button class="buttonS" style="margin-right: 20px;"><img class="imagenL" src="PrimerParcial/configurar.png" alt=""></button>
-                <button class="buttonS"><img class="imagenL" src="PrimerParcial/Salir.png" alt=""></button> 
+                <button class="buttonS"><img class="imagenL" src="PrimerParcial/Salir.png" alt=""><a href="CerrarGrafica.php">Ce</a></button> 
             </div>
             <div class="menuM">
                 <div class="infoM">
@@ -37,8 +37,8 @@
                     <div class="tM">
                         <div class="conT"><button class="buttonT"><b><a href="pregunta2.html" style="color:#253456;">CLIENTES</a></b></button><img class="imagenT" src="PrimerParcial/clientes.png" alt=""></div>
                         <div class="conT"><button class="buttonT"><b><a href="formGrafica.html" style="color:#253456;">ITEMS</a></b></button><img class="imagenT" src="PrimerParcial/items.png" alt=""></div>
-                        <div class="conT"><button class="buttonT"><b><a href="" style="color:#253456;">PRESTAMOS</a></b></button><img class="imagenT" src="PrimerParcial/Prestamos.png" alt=""></div>
-                        <div class="conT"><button class="buttonT"><b><a href="" style="color:#253456;">USUARIOS</a></b></button><img class="imagenT" src="PrimerParcial/Usuarios.png" alt=""></div>
+                        <div class="conT"><button class="buttonT"><b><a href="pregunta4.php" style="color:#253456;">PRESTAMOS</a></b></button><img class="imagenT" src="PrimerParcial/Prestamos.png" alt=""></div>
+                        <div class="conT"><button class="buttonT"><b><a href="login.html" style="color:#253456;">USUARIOS</a></b></button><img class="imagenT" src="PrimerParcial/Usuarios.png" alt=""></div>
                     </div>
                 </div>
             </div>
