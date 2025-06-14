@@ -57,12 +57,23 @@ td img {
 }
 
 a {
-    color: white;
     text-decoration: none;
 }
 
 a:hover {
     text-decoration: underline;
+}
+
+/* Style specifically for table header links */
+thead a {
+    color: white;
+}
+
+thead a:hover {
+    text-decoration: underline;
+}
+.eliminar{
+    color: red;
 }
 </style>
 
@@ -91,7 +102,7 @@ a:hover {
         <td><?php echo $row['editorial'];?></td>
         <td><?php echo $row['anio'];?></td>
         <?php if($_SESSION['nivel']==1){?>
-        <td><a href="delete.php?id=<?php echo $row['id'];?>">Eliminar</a> </td>
+        <td><a class="eliminar" href="delete.php?id=<?php echo $row['id'];?>">Eliminar</a> </td>
         <?php } ?>
     </tr>
     <?php } ?>
